@@ -2,13 +2,13 @@
 const express = require("express");
 const BodyParser = require("body-parser");
 const MongoClient = require('mongodb').MongoClient;
-const { mongo } = require('./conf.js');
+const { mongo, conf } = require('./conf.js');
 const app = express();
 const server = require('http').Server(app);
 // const logi = require('./node_files/logical.js');
 const io = require('socket.io')(server);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || conf.PORT || 8080;
 
 
 let timeUpdate = null;

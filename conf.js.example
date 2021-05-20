@@ -12,5 +12,8 @@ module.exports = {
 		},
 		base_collection: "mongo_collection",
 		database: 'mongo_database'
+	},
+	conf: {
+		PORT: 1111
 	}
 };
