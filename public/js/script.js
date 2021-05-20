@@ -1,5 +1,6 @@
 "use strict";
-let socket = io.connect(window.location.href);
+let socket = io.connect(window.location.host, { path: window.location.pathname+"socket.io" });
+console.log('window.location.href: ', window.location);
 
 socket.emit('new_user', 1);
 socket.on('users_online', function (data) {
@@ -45,7 +46,7 @@ function sendClicksToServer() {
 		clicks: clicksLocal
 	}
 	$.ajax({
-		url: '/user_click',
+		url: './user_click',
 		data: datos,
 		method: 'POST',
 		success: function (res, textStatus, xhr) {
@@ -108,13 +109,14 @@ window.onload = function () {
 		datos.id = document.cookie.split('=')[0];
 	}
 	$.ajax({
-		url: '/cookie',
+		url: './cookie',
 		data: datos,
 		method: 'POST',
 		success: function (res) {
 			if (res.error) {
 				writeCookie(res.id, res.id, 30);
 			} else {
+				console.log('res: ', res);
 				clicksLocal = res.clicks;
 				$('#clicksLocal').html(clicksLocal + ' clicks local');
 			}
