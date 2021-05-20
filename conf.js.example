@@ -1,0 +1,16 @@
+"use strict";
+module.exports = {
+	mongo: {
+		url: 'mongo_url',
+		options: {
+			// autoReconnect: true,
+			poolSize: 25,
+			connectTimeoutMS: 60000,
+			socketTimeoutMS: 600000,
+			useUnifiedTopology: true
+			// useNewUrlParser: true
+		},
+		base_collection: "mongo_collection",
+		database: 'mongo_database'
+	}
+};

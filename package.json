@@ -1,0 +1,27 @@
+{
+  "name": "eroge-multiplayer",
+  "version": "0.0.1",
+  "description": "An eroge for multiplayer",
+  "private": "true",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^3.6.7",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Denis cou",
+  "license": "ISC",
+  "engines": {
+    "node": "4.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

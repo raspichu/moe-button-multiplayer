@@ -1,0 +1,108 @@
+body {
+	overflow: hidden;
+}
+
+* {
+	user-select: none;
+	cursor: default;
+}
+
+#content {
+	display: none;
+}
+
+#usersOnline {
+	display: flex;
+	justify-content: center;
+}
+
+#cont {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	-webkit-animation: animatebottom 1s ease;
+	animation: animatebottom 1s ease;
+}
+
+#cont>div {
+	min-height: 100px;
+	min-width: 363px;
+	top: 50%;
+	font-family: Montserrat;
+	font-size: 30px;
+}
+
+#cont>button {
+	width: 100px;
+	height: 50px;
+	font-size: 20px;
+}
+
+#clicksOnline, #clicksLocal {
+	font-size: 10px;
+}
+
+#loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes animatebottom {
+	from {
+		top: 0%;
+		opacity: 0
+	}
+	to {
+		top: 50%;
+		opacity: 1
+	}
+}
+
+@keyframes animatebottom {
+	from {
+		top: 0%;
+		opacity: 0
+	}
+	to {
+		top: 50%;
+		opacity: 1
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#text {
+		min-width: 95%;
+	}
+}
